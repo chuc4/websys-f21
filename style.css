@@ -260,7 +260,16 @@ li a:hover:not(.active) {
   text-align: center;
 }
 
+.project img {
+  height: 200px;
+  border-radius: .5em;
+  margin-top: 10px;
+}
 
+.project div:nth-child(even){
+  font-weight: bold;
+  font-size: 1.2em;
+}
 
 
 .project, .skill {
@@ -445,6 +454,41 @@ footer .me a{
   color: #60D4D5;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.card .title {
+  color: grey;
+  font-size: 18px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.card button:hover, a:hover {
+  opacity: 0.7;
+}
+
 
 @media only screen and (max-width: 765px) {
 
@@ -547,6 +591,33 @@ footer .me a{
   .education:nth-child(even), .work:nth-child(odd) {
     color: rgb(153, 33, 29);
   }
+
+  /* Container page  */
+  
+.container-page {
+  max-width: 1080px;
+  padding: 1em;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100% !important;
+  grid-template-rows: auto;
+  position: relative;
+  justify-content: center;
+}
+
+.container-page h1, .container-page h2 {
+  text-align: center;
+}
+
+.personal-image img {
+  height: 20vh;
+  width: auto;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  border-radius: 2em;
+}
+
 }
 
 /* Animations --------------------------------------- */
@@ -588,7 +659,7 @@ footer .me a{
 }
 
 .personal-image img {
-  height: 40vh;
+  height: 20vh;
   width: auto;
   z-index: 10;
   position: absolute;
