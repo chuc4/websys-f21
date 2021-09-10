@@ -527,15 +527,15 @@ footer .me a{
   #header-box3 {
     grid-row: 2 / 3;
     grid-column: 1 / 3;
+    justify-content: flex-start;
+    padding: 2em;
   }
   
   #header-box3 img {
-    height: 60%;
+    height: 20%;
     width: auto;
-    top: 0;
-    right: 0;
     z-index: 2;
-    border-radius: 2em;
+    border-radius: 1em;
     box-shadow: 0 4px 8px 0 rgba(29, 31, 32, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
