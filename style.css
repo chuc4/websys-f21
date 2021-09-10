@@ -1,3 +1,4 @@
+/* Universal ------------------------------------ */
 :root {
   --urbanist: 'Urbanist', sans-serif;
   --jost: 'Jost', sans-serif;
@@ -17,9 +18,9 @@ body {
 
 .container {
   max-width: 1080px;
-  padding: 1em;
+  padding: 3em;
   margin: 0 auto;
-  background-color: none;
+  background-color: transparent;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
@@ -27,7 +28,7 @@ body {
   position: relative;
 }
 
-/* Back to Top button */
+/* Back to the top button ------------------------------------ */
 body .lander {
   position: fixed;
   bottom: 1em;
@@ -36,7 +37,7 @@ body .lander {
   width: auto;
   z-index: 10;
   opacity: .6;
-  transition: all ease-in-out .5;
+  transition: all ease-in-out .5s;
 }
 
 body .lander:hover {
@@ -92,6 +93,10 @@ header .clouds-bottom:first-of-type{
   animation-timing-function: linear;
   animation-direction: alternate;
   animation-name: glow;
+}
+
+#header-box1 p{
+  text-align: left;
 }
 
 #header-box1 a {
@@ -177,17 +182,17 @@ nav ul {
   overflow: hidden;
 }
 
-li {
+nav li {
   float: right;
 }
 
-li:first-child {
+nav li:first-child {
   float: left;
   font-size: 1.3em;
   font-weight: bold;
 }
 
-li a {
+nav li a {
   display: block;
   color: whitesmoke;
   text-align: center;
@@ -227,22 +232,35 @@ li a:hover:not(.active) {
   border-bottom: solid rgba(43, 43, 43, 0.568) 3px;
 }
 
-/* Projects --------------------------------------------------- */
+/* Resume && Profile --------------------------------------------------- */
 #projects, #skills{
   background-color: #FFFFFF;
 }
 
+#skills h2 {
+  grid-column: 1 / 3;
+  border-bottom: 1px dotted gray;
+  color: #289188;
+}
+
 .projects, .skills {
   width: 100%;
-  grid-row: 2 / 3;
-  grid-column: 1 / 3;
-  background-color: none;
+  background-color: transparent;
   justify-content: center;
-  
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+.projects, .skills, .profile {
+  grid-column: 1 / 3;
+}
+
+.profile {
+  text-align: center;
+}
+
+
 
 
 .project, .skill {
@@ -278,7 +296,7 @@ li a:hover:not(.active) {
   z-index: 1;
 }
 
-/* About us / Portfolio ------------------------------------------ */
+/* About us & Portfolio ------------------------------------------ */
 #about{
   background-color: #82DBD5;
   background-image: url(imgs/sky.png);
@@ -297,12 +315,15 @@ li a:hover:not(.active) {
   grid-column: 1 / 2;
   margin: 2em;
   position: relative;
+  z-index: 3;
 }
 
 .person:nth-child(odd), .portfolio:nth-child(odd) {
   grid-column: 2 / 3;
   margin: 2em;
   position: relative;
+  z-index: 3;
+
 }
 
 .person img, .portfolio img {
@@ -340,7 +361,11 @@ li a:hover:not(.active) {
   width: 300px;
 }
 
-/* Ground transition */
+.awards {
+  grid-column: 1 / 3;
+}
+
+/* Ground transitions -------------------------------------- */
 
 #ground {
   position: relative;
@@ -349,7 +374,7 @@ li a:hover:not(.active) {
 
 .ground-background{
   position: absolute;
-  bottom: 10em;
+  bottom: 5em;
   width: 100%;
   height: 35vh;
 }
@@ -377,11 +402,14 @@ footer{
   background-color: #7a6d7b;
   padding-bottom: 3em;
   position: relative;
+  overflow-x: hidden;
 }
 
 footer h1 {
   border-bottom: black !important;
 }
+
+
 
 footer .contact {
   width: 100%;
@@ -399,18 +427,27 @@ footer .contact img {
   height: auto;
 }
 
-footer .form {
+footer .form, footer .me {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   padding: 2em;
-  font-size: 2em;
+  font-size: calc(10px + 1vmin);
   border-left: 2px solid #000000;
   margin-top: 2em;
 }
 
+footer .me {
+  grid-column: 1 / 3;
+}
+
+footer .me a{
+  text-decoration: none;
+  color: #60D4D5;
+}
+
 
 @media only screen and (max-width: 765px) {
-  
+
   #header-box1 {
     grid-row: 1 / 2 !important;
     grid-column: 1 / 3 !important;
@@ -458,6 +495,7 @@ footer .form {
     width: 100%;
     z-index: 2;
   }
+
   /* Footer */
   footer .form {
     grid-row: 3 / 4;
@@ -469,6 +507,45 @@ footer .form {
   .footer .contact {
     grid-column: 1 / 3;
     text-align: center;
+  }
+
+
+  /* Portfolios */
+  .person:nth-child(even), .portfolio:nth-child(even) {
+    grid-column: 1 / 3;
+    margin: 2em;
+    position: relative;
+  }
+  
+  .person:nth-child(odd), .portfolio:nth-child(odd) {
+    grid-column: 1 / 3;
+    margin: 2em;
+    position: relative;
+  }
+
+  /* Header Box */
+  #header-box3 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    justify-content: flex-start;
+    padding: 2em;
+  }
+  
+  #header-box3 img {
+    height: 20%;
+    width: auto;
+    z-index: 2;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px 0 rgba(29, 31, 32, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /* Resume */
+  .education, .work {
+    grid-column: 1 / 3;
+  }
+
+  .education:nth-child(even), .work:nth-child(odd) {
+    color: rgb(153, 33, 29);
   }
 }
 
