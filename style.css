@@ -361,6 +361,10 @@ li a:hover:not(.active) {
   width: 300px;
 }
 
+.awards {
+  grid-column: 1 / 3;
+}
+
 /* Ground transitions -------------------------------------- */
 
 #ground {
@@ -404,6 +408,8 @@ footer{
 footer h1 {
   border-bottom: black !important;
 }
+
+
 
 footer .contact {
   width: 100%;
@@ -534,7 +540,7 @@ footer .me a{
   }
 
   /* Resume */
-  .awards, .education, .work {
+  .education, .work {
     grid-column: 1 / 3;
   }
 
