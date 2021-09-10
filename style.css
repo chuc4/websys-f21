@@ -504,3 +504,86 @@ footer .form {
     text-shadow: rgb(185, 185, 185) 1px 0 10px;
   }
 }
+
+/* --- INDIVIDUAL PAGE CSS (ALEXIS) --- */
+.personal-image {
+  justify-content: center;
+}
+
+.personal-image img {
+  height: 40vh;
+  width: auto;
+  z-index: 10;
+  position: absolute;
+  border-radius: 2em;
+}
+
+
+.hcard-style {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90%;
+  width: 80%;
+}
+
+.hcard-style a{
+  color: white;
+}
+
+.hcard-style a:hover{
+  color: gray;
+}
+
+.objective_statement {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 0%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+  font-size: 1.5em;
+  background-color: white;
+}
+
+.edu-work {
+  background-color: white;
+}
+
+.edu-work .container{
+  justify-content: center;
+  text-align: center;
+  grid-gap: 10px;
+}
+
+.edu-work .container h3{
+  margin:0px;
+}
+
+.edu-work .container h3 a{
+  color: black;
+  margin:0px;
+}
+
+.edu-work .container h3 a:hover{
+  color: gray;
+  
+}
+
+.container-page {
+  max-width: 1080px;
+  padding: 1em;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  position: relative;
+  justify-content: center;
+}
+
+.container-page h2{
+  text-align: center;
+}
